@@ -31,16 +31,34 @@ echo "<br>";
 */
 
 // For Loops.
-for( $i = 1; $i < 100; $i++){
-    if( $i % 15 == 0) {
-        echo $i . " - FIZZ BUZZ <br/>";
-    } else if ( $i % 5 == 0){
-        echo $i . " - BUZZ <br/>";
-    } else if ( $i % 3 == 0){
-        echo $i . " - FIZZ <br/>";
-    } else{
-        echo $i . "<br>";
-    }
+// for( $i = 1; $i < 100; $i++){
+//     if( $i % 15 == 0) {
+//         echo $i . " - FIZZ BUZZ <br/>";
+//     } else if ( $i % 5 == 0){
+//         echo $i . " - BUZZ <br/>";
+//     } else if ( $i % 3 == 0){
+//         echo $i . " - FIZZ <br/>";
+//     } else{
+//         echo $i . "<br>";
+//     }
+// }
+
+
+//For Each Loop
+$clientes = array("Luis", "Fernanda", "Antuan");
+
+foreach( $clientes as $cliente ){
+    echo $cliente . "<br>"; 
 }
+
+$cliente = [
+    "nombre" => "Luis",
+    "saldo" => 600,
+    "tipo" => "premium"
+];
+
+foreach( $cliente as $key => $valor ):
+    echo $key . " - " . $valor . "<br>";
+endforeach;
 
 include 'includes/footer.php';
